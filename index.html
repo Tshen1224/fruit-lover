@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fruit lover</title>
+	<style>
+  @font-face {
+    font-family: shui;
+    src: url('fontshui.ttf')
+  }
+	canvas {border: 1px solid black;}
+  .main {
+    text-align: center;
+  }
+  .btn {
+    z-index: 99999;
+    cursor: pointer;
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    font-family: shui;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.85;
+    background-color: #F5E938;
+    border-color: black;
+  }
+  .btn:hover {
+    opacity: 1.0;
+  }
+  .btn-start, .btn-help {
+    top: 550px;
+  }
+  .score-board {
+    position: absolute;
+    top: 315px;
+    font-family: shui;
+    font-size: 16px;
+    line-height: 45px;
+  }
+	</style>
+</head>
+<body onresize="resize()">
+  <div class="main">
+  	<canvas width='1000' height='800' id='myCanvas'></canvas>
+
+    <button class='btn btn-start' onclick='startGame()' id='startBtn'>Start</button>
+    <button class='btn btn-help' onclick='helpGame()' id='helpBtn'>Help</button>
+
+    <div class='score-board' id='scoreBoard'></div>
+  <div>
+
+  <audio id="bgm" autoplay loop>
+    <source src="bgm.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src='main.js'></script>
+</body>
+</html>
